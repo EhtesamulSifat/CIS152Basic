@@ -33,8 +33,8 @@
             this.txtDogOwner = new System.Windows.Forms.TextBox();
             this.btnCalc = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.txtNumPerWeek = new System.Windows.Forms.TextBox();
+            this.lstOut = new System.Windows.Forms.ListBox();
             this.btnReset = new System.Windows.Forms.Button();
             this.btnQuit = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -63,7 +63,7 @@
             // txtDogOwner
             // 
             this.txtDogOwner.Location = new System.Drawing.Point(214, 100);
-            this.txtDogOwner.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtDogOwner.Margin = new System.Windows.Forms.Padding(6);
             this.txtDogOwner.Name = "txtDogOwner";
             this.txtDogOwner.Size = new System.Drawing.Size(604, 31);
             this.txtDogOwner.TabIndex = 2;
@@ -71,12 +71,13 @@
             // btnCalc
             // 
             this.btnCalc.Location = new System.Drawing.Point(70, 553);
-            this.btnCalc.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnCalc.Margin = new System.Windows.Forms.Padding(6);
             this.btnCalc.Name = "btnCalc";
             this.btnCalc.Size = new System.Drawing.Size(150, 48);
-            this.btnCalc.TabIndex = 3;
+            this.btnCalc.TabIndex = 6;
             this.btnCalc.Text = "&Calculate";
             this.btnCalc.UseVisualStyleBackColor = true;
+            this.btnCalc.Click += new System.EventHandler(this.btnCalc_Click);
             // 
             // label3
             // 
@@ -84,24 +85,25 @@
             this.label3.Location = new System.Drawing.Point(58, 182);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(280, 25);
-            this.label3.TabIndex = 4;
+            this.label3.TabIndex = 3;
             this.label3.Text = "Number Of Walks Per Week";
             // 
-            // textBox1
+            // txtNumPerWeek
             // 
-            this.textBox1.Location = new System.Drawing.Point(344, 176);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(474, 31);
-            this.textBox1.TabIndex = 5;
+            this.txtNumPerWeek.Location = new System.Drawing.Point(344, 176);
+            this.txtNumPerWeek.Name = "txtNumPerWeek";
+            this.txtNumPerWeek.Size = new System.Drawing.Size(474, 31);
+            this.txtNumPerWeek.TabIndex = 4;
             // 
-            // listBox1
+            // lstOut
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 25;
-            this.listBox1.Location = new System.Drawing.Point(70, 255);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(785, 204);
-            this.listBox1.TabIndex = 6;
+            this.lstOut.FormattingEnabled = true;
+            this.lstOut.ItemHeight = 25;
+            this.lstOut.Location = new System.Drawing.Point(70, 255);
+            this.lstOut.Name = "lstOut";
+            this.lstOut.Size = new System.Drawing.Size(785, 204);
+            this.lstOut.TabIndex = 5;
+            this.lstOut.TabStop = false;
             // 
             // btnReset
             // 
@@ -111,6 +113,7 @@
             this.btnReset.TabIndex = 7;
             this.btnReset.Text = "&Reset";
             this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // btnQuit
             // 
@@ -120,6 +123,7 @@
             this.btnQuit.TabIndex = 8;
             this.btnQuit.Text = "&Quit";
             this.btnQuit.UseVisualStyleBackColor = true;
+            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
             // Form1
             // 
@@ -128,14 +132,14 @@
             this.ClientSize = new System.Drawing.Size(1106, 651);
             this.Controls.Add(this.btnQuit);
             this.Controls.Add(this.btnReset);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.lstOut);
+            this.Controls.Add(this.txtNumPerWeek);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnCalc);
             this.Controls.Add(this.txtDogOwner);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Form1";
             this.Text = "Sifat\'s Dog walking Service";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -151,8 +155,8 @@
         private System.Windows.Forms.TextBox txtDogOwner;
         private System.Windows.Forms.Button btnCalc;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.TextBox txtNumPerWeek;
+        private System.Windows.Forms.ListBox lstOut;
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.Button btnQuit;
     }
